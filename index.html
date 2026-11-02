@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan S John — Electronics & Computer Engineering</title>
+<meta name="description" content="Portfolio of Juan S John, Electronics & Computer Engineering student at VIT Chennai. VLSI, embedded systems, DSP, research and web.">
+<meta property="og:title" content="Juan S John — Portfolio">
+<meta property="og:image" content="assets/juan.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0e0c;--cream:#ece6d8;--paper:#ded5c0;--sand:#c9b48a;--moss:#3b4a3a;--mute:#8d8878;
+--d:'Archivo',system-ui,sans-serif;--s:'Instrument Serif',Georgia,serif}
+*{box-sizing:border-box;margin:0}
+html{background:var(--ink)}
+body{background:var(--cream);color:var(--ink);font:400 1.05rem/1.6 var(--d);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sand);outline-offset:3px}
+.big{font-family:var(--d);font-weight:900;font-stretch:68%;text-transform:uppercase;letter-spacing:-.01em;line-height:.84}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem)}
+/* preloader */
+#pre{position:fixed;inset:0;z-index:99;background:var(--ink);display:grid;place-items:center;transition:transform 1s cubic-bezier(.76,0,.24,1)}
+#pre.go{transform:translateY(-100%)}
+#pre svg{width:min(70vw,360px);overflow:visible}
+#pre path{fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;filter:drop-shadow(0 0 6px #fff)}
+#pre text{font:900 2.7rem var(--d);fill:#fff;letter-spacing:.2em;filter:drop-shadow(0 0 10px #fff)}
+#pre circle{fill:#fff;filter:drop-shadow(0 0 8px #fff)}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:20;mix-blend-mode:difference;color:#fff}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:1.2rem}
+.logo{font:800 1.4rem var(--d);text-decoration:none;letter-spacing:-.02em}
+nav{display:flex;gap:1.8rem;align-items:center;font-size:.92rem}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.pill{border:1.5px solid #fff;border-radius:99px;padding:.45rem 1.1rem}
+/* hero */
+.hero{position:relative;height:112svh;min-height:640px;overflow:hidden;background:var(--cream)}
+.hero h1{position:absolute;left:0;right:0;top:15svh;z-index:2;text-align:center;font-size:clamp(5rem,23vw,22rem);will-change:transform;
+background:linear-gradient(#0e0e0c 35%,rgba(14,14,12,.05) 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ln{display:block;overflow:hidden;padding-bottom:.06em}
+.ln>span{display:block;transform:translateY(108%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.ready .ln>span{transform:none}.ready .ln:nth-child(2)>span{transition-delay:.15s}
+.ph{position:absolute;bottom:0;left:50%;width:min(92vw,560px);height:92%;z-index:1;margin-left:calc(min(92vw,560px)/-2);opacity:0;transition:opacity 1.6s .4s;will-change:transform}
+.ready .ph{opacity:1}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.15) brightness(1.04);mix-blend-mode:multiply;
+-webkit-mask-image:linear-gradient(#000 70%,transparent),radial-gradient(ellipse 48% 62% at 50% 62%,#000 45%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(#000 70%,transparent),radial-gradient(ellipse 48% 62% at 50% 62%,#000 45%,transparent 100%);mask-composite:intersect}
+.meta{position:absolute;z-index:3;bottom:2.2rem;max-width:20rem;font-size:.9rem}
+.meta.l{left:clamp(1.2rem,4vw,3rem)}.meta.r{right:clamp(1.2rem,4vw,3rem);text-align:right}
+.meta p{font:italic 1.35rem/1.25 var(--s);margin-bottom:.8rem}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:99px;background:var(--ink);color:var(--cream);text-decoration:none;font-weight:600;font-size:.92rem;transition:transform .3s,background .3s}
+.btn:hover{background:var(--moss)}.btn.o{background:none;color:inherit;border:1.5px solid currentColor}
+/* about pin */
+.pinw{position:relative;height:340vh;background:var(--ink)}
+.pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:2.5vw;
+background:radial-gradient(120% 90% at 50% 100%,#26311f,var(--ink) 65%);color:var(--cream)}
+.wd{font-size:clamp(4rem,15vw,15rem);flex:none;white-space:nowrap}
+.card{position:relative;flex:none;width:24vw;height:36vh;overflow:hidden;border-radius:22px;background:#000;will-change:width,height}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 42%;filter:grayscale(1) contrast(1.2) brightness(.8)}
+.card:before{content:"";position:absolute;inset:0;z-index:1;background:conic-gradient(from 160deg at 70% -10%,transparent 0 10%,rgba(236,230,216,.35) 18%,transparent 28%),linear-gradient(90deg,rgba(14,14,12,.92),rgba(14,14,12,.15) 70%)}
+.ab{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(1.4rem,8vw,7rem);opacity:0}
+.ab h2{font-size:clamp(3rem,8vw,7.5rem);margin-bottom:1.2rem}
+.ab p{font:1.7rem/1.25 var(--s);max-width:34rem;color:#d8d0bc}
+.facts{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:1.8rem;font-size:.9rem}.facts b{display:block;font-size:1.05rem;color:var(--sand)}
+/* path */
+#path{background:var(--ink);color:var(--cream);position:relative;overflow:hidden;padding:clamp(6rem,12vw,10rem) 0}
+.gh{position:absolute;left:0;white-space:nowrap;font-size:clamp(9rem,26vw,26rem);color:rgba(236,230,216,.045);pointer-events:none;will-change:transform}
+h2.big{font-size:clamp(3.5rem,10vw,9rem)}
+.lead{font:1.6rem/1.25 var(--s);color:#cfc7b2;max-width:32rem;margin-top:1rem}
+.tl{margin-top:4rem;position:relative}
+.row{display:grid;grid-template-columns:230px 1fr;gap:2rem;padding:2.2rem 0;border-top:1.5px solid rgba(236,230,216,.18)}
+.row time{font:italic 1.5rem var(--s);color:var(--sand)}
+.row h3{font:800 clamp(1.5rem,3vw,2.3rem)/1.05 var(--d);font-stretch:80%;margin-bottom:.5rem}
+.row p{color:#b9b19d;max-width:40rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem;padding:0}
+.chips li{list-style:none;font-size:.82rem;padding:.2rem .8rem;border-radius:99px;border:1px solid currentColor;opacity:.75}
+/* gallery */
+.gw{position:relative;height:430vh;background:var(--cream)}
+.gp{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.gp .hd{padding:0 clamp(1.2rem,4vw,3rem);position:absolute;top:11svh;left:0;right:0;z-index:2}
+.gp .hd h2{font-size:clamp(3rem,8vw,7rem)}
+.trk{display:flex;gap:3vw;padding:20svh 6vw 0;width:max-content;will-change:transform}
+.pc{flex:none;width:min(74vw,430px);height:58svh;border-radius:20px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:var(--c);color:var(--t,#ece6d8);box-shadow:0 30px 60px -30px rgba(0,0,0,.5);will-change:transform}
+.pc .gl{font-size:clamp(5rem,13vw,9rem);opacity:.95}
+.pc h3{font:800 1.45rem/1.05 var(--d);font-stretch:85%;margin-bottom:.4rem}
+.pc p{font-size:.92rem;opacity:.85;line-height:1.4}
+.pc a{font-weight:700;display:inline-block;margin-top:.8rem}
+.pc .chips{margin-top:.7rem}
+/* skills */
+#skills{background:var(--paper);padding:clamp(5rem,10vw,8rem) 0}
+.sr{border-top:1.5px solid var(--ink);padding:1.1rem 0;cursor:pointer;transition:opacity .4s}
+.sk:hover .sr:not(.on),.sk:focus-within .sr:not(.on){opacity:.35}
+.sr button{all:unset;display:flex;justify-content:space-between;align-items:baseline;width:100%;cursor:pointer;font-size:clamp(2.6rem,8vw,6.5rem)}
+.sr button:focus-visible{outline:3px solid var(--moss)}
+.sr small{font:italic 1.3rem var(--s);text-transform:none;letter-spacing:0}
+.sr .box{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.16,1,.3,1)}
+.sr.on .box{grid-template-rows:1fr}.box>div{overflow:hidden}
+.sr .chips li{font-size:1rem;padding:.4rem 1.1rem;background:var(--ink);color:var(--cream);border:0;opacity:1;transform:translateY(14px);opacity:0;transition:.5s}
+.sr.on .chips li{transform:none;opacity:1;transition-delay:calc(var(--i)*60ms + 150ms)}
+.sr.on button{color:var(--moss)}
+/* contact */
+#contact{background:var(--ink);color:var(--cream);text-align:center;padding:clamp(6rem,12vw,10rem) 0 2rem}
+.mail{display:block;font-weight:800;font-stretch:75%;font-size:clamp(1.7rem,7vw,7rem);line-height:1;text-decoration:none;margin:2rem 0;letter-spacing:-.02em;word-break:break-all;transition:color .3s}
+.mail:hover{color:var(--sand)}
+.links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+#contact .btn{background:var(--cream);color:var(--ink)}#contact .btn.o{background:none;color:var(--cream)}
+footer{margin-top:6rem;font-size:.85rem;color:var(--mute)}
+@media(max-width:820px){nav a:not(.pill){display:none}.meta.r{display:none}.meta.l{bottom:1.2rem}.row{grid-template-columns:1fr;gap:.5rem}.card{width:56vw;height:34vh}.hero h1{top:18svh}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01s!important}}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--sand);transform-origin:0 50%;transform:scaleX(0);z-index:30}
+#skills,#contact{position:relative;border-radius:40px 40px 0 0;margin-top:-40px;z-index:2}
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1s,transform 1.2s cubic-bezier(.16,1,.3,1);transition-delay:var(--dl,0s)}
+.rv.in{opacity:1;transform:none}
+.ln>span{translate:var(--x,0) 0}
+h2.big,.mail{transform:skewY(calc(var(--sk,0)*1deg));transform-origin:0 100%}
+.ph{clip-path:inset(100% 0 0 0);transition:clip-path 1.8s .3s cubic-bezier(.16,1,.3,1),opacity 1s .3s}.ready .ph{clip-path:inset(0)}
+.ab .w{transition:color .2s;color:#8a8472}
+</style>
+</head>
+<body>
+<div id="bar"></div><div id="pre" aria-hidden="true"><svg viewBox="-160 -160 320 320"><path id="bl"/><circle id="cm" r="5"/><text text-anchor="middle" dy=".35em">JUAN</text></svg></div>
+<header><div class="wrap"><a class="logo" href="#top">Juan S John</a>
+<nav><a href="#work">Projects</a><a href="#path">Experience</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a class="pill" href="resume.pdf" download>Résumé</a></nav></div></header>
+<main id="top">
+<section class="hero" id="hero">
+<h1 class="big" id="h1"><span class="ln"><span>Juan S</span></span><span class="ln"><span>John</span></span></h1>
+<div class="ph" id="phw"><img src="assets/juan.jpg" alt="Juan S John, smiling with arms crossed"></div>
+<div class="meta l"><p>Electronics &amp; Computer Engineering at VIT Chennai. Hardware meets software.</p><a class="btn" href="#work">See my work</a></div>
+<div class="meta r"><p>VLSI, embedded systems, signal processing and the web.</p>Open to internships</div>
+</section>
+
+<div class="pinw" id="about"><div class="pin">
+<div class="wd big">About</div>
+<div class="card" id="card"><img id="cimg" src="assets/juan.jpg" alt="">
+<div class="ab" id="ab"><h2 class="big">Curious how things work</h2><p>I like taking an idea from theory to something that runs, whether that's a circuit in Virtuoso, a filter in MATLAB or a React app. Always up for learning something new and taking on a hard problem.</p>
+<div class="facts"><span><b>Kottayam, Kerala</b>Based in</span><span><b>VIT Chennai</b>Studying at</span><span><b>Embedded · DSP · VLSI · Web</b>Focus</span></div></div></div>
+<div class="wd big">Me</div>
+</div></div>
+
+<section id="path"><div class="gh big" id="g1" aria-hidden="true" style="top:2rem">Where I've been</div><div class="gh big" id="g2" aria-hidden="true" style="top:34rem">Research · Study</div>
+<div class="wrap" style="position:relative"><h2 class="big" data-scr>Where I've been</h2><p class="rv lead">Research, lab work and coursework so far.</p>
+<div class="tl">
+<div class="rv row"><time>May – Aug 2026</time><div><h3>Summer Research Intern, Smart Healthcare</h3><p>Centre for Healthcare Advancement, Innovation and Research (CHAIR), VIT Chennai. Worked on noninvasive blood glucose estimation from ECG signals with a multi-expert SC-ResNet deep learning model.</p><ul class="chips"><li>Deep Learning</li><li>ECG</li><li>Research</li></ul></div></div>
+<div class="rv row"><time>2023 – Present</time><div><h3>B.Tech, Electronics &amp; Computer Engineering</h3><p>Vellore Institute of Technology, Chennai. Digital systems, signal processing, programming, embedded platforms and VLSI design.</p></div></div>
+<div class="rv row"><time>Higher secondary</time><div><h3>Class XII, Science (PCM + CS)</h3><p>Kerala. Foundations in mathematics, physics and computer science.</p></div></div>
+</div></div></section>
+
+<div class="gw" id="work"><div class="gp"><div class="hd"><h2 class="big">Selected work</h2></div>
+<div class="trk" id="trk">
+<article class="pc" style="--c:#0e0e0c"><div class="gl big">7:3</div><div><h3>7:3 Compressor &amp; 8×8 Wallace Tree Multiplier</h3><p>Team VLSI project in Cadence Virtuoso comparing static CMOS and hybrid logic on power, delay, power-delay product and area.</p><ul class="chips"><li>VLSI</li><li>Cadence</li><li>CMOS</li></ul></div></article>
+<article class="pc" style="--c:#3b4a3a"><div class="gl big">ECG</div><div><h3>Blood Glucose Estimation from ECG</h3><p>Noninvasive estimation with a multi-expert SC-ResNet model, researched during the CHAIR internship.</p><ul class="chips"><li>Deep Learning</li><li>Research</li></ul></div></article>
+<article class="pc" style="--c:#c9b48a;--t:#0e0e0c"><div class="gl big">Sync</div><div><h3>Study Sync AI</h3><p>A study companion web app for managing and organizing my own study workflow.</p><ul class="chips"><li>React</li><li>AI</li></ul><a href="https://studying-sync-ai.lovable.app/dashboard" target="_blank" rel="noopener">View project</a></div></article>
+<article class="pc" style="--c:#1d1d1a"><div class="gl big">EQ</div><div><h3>Adaptive Audio Equalizer</h3><p>A 5-band equalizer in MATLAB with a Java port, exploring context-aware filtering in real time.</p><ul class="chips"><li>MATLAB</li><li>Java</li><li>DSP</li></ul><a href="https://github.com/jn-komban" target="_blank" rel="noopener">GitHub</a></div></article>
+<article class="pc" style="--c:#8a7a5c"><div class="gl big">Buzz</div><div><h3>Multi-Player Buzzer System</h3><p>An embedded input system with strict prioritization logic and a stable, low-latency response.</p><ul class="chips"><li>Embedded</li><li>C</li></ul><a href="https://github.com/jn-komban" target="_blank" rel="noopener">GitHub</a></div></article>
+<article class="pc" style="--c:#ded5c0;--t:#0e0e0c;outline:1.5px solid #0e0e0c"><div class="gl big">Draft</div><div><h3>Online Draft Game</h3><p>A browser-based strategic drafting game with custom game logic and a responsive UI.</p><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><a href="https://github.com/jn-komban/Poke-Draft" target="_blank" rel="noopener">GitHub</a></div></article>
+</div></div></div>
+
+<section id="skills"><div class="wrap"><h2 class="big" data-scr style="margin-bottom:2.5rem">Tools I build with</h2>
+<div class="sk" id="sk">
+<div class="rv sr on"><button class="big" aria-expanded="true">Languages<small>5</small></button><div class="box"><div><ul class="chips" style="padding-block:.8rem 1rem"><li style="--i:0">Java</li><li style="--i:1">C</li><li style="--i:2">Python</li><li style="--i:3">JavaScript</li><li style="--i:4">MATLAB</li></ul></div></div></div>
+<div class="rv sr"><button class="big" aria-expanded="false">Web &amp; tools<small>4</small></button><div class="box"><div><ul class="chips" style="padding-block:.8rem 1rem"><li style="--i:0">HTML/CSS</li><li style="--i:1">Git &amp; GitHub</li><li style="--i:2">VS Code</li><li style="--i:3">Cadence Virtuoso</li></ul></div></div></div>
+<div class="rv sr"><button class="big" aria-expanded="false">Engineering<small>5</small></button><div class="box"><div><ul class="chips" style="padding-block:.8rem 1rem"><li style="--i:0">Digital systems</li><li style="--i:1">Signal processing</li><li style="--i:2">Embedded platforms</li><li style="--i:3">Circuit design</li><li style="--i:4">VLSI design</li></ul></div></div></div>
+<div class="rv sr"><button class="big" aria-expanded="false">Concepts<small>5</small></button><div class="box"><div><ul class="chips" style="padding-block:.8rem 1rem"><li style="--i:0">DSA</li><li style="--i:1">OOP</li><li style="--i:2">ML basics</li><li style="--i:3">Problem solving</li><li style="--i:4">Prompt engineering</li></ul></div></div></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><h2 class="big" data-scr>Let's build something</h2><p class="rv lead" style="margin-inline:auto">Internships, project collaborations, or a good conversation about tech.</p>
+<a class="rv mail" href="mailto:juansuniljohn@gmail.com">juansuniljohn@gmail.com</a>
+<div class="rv links"><a class="btn" href="https://github.com/jn-komban" target="_blank" rel="noopener">GitHub</a><a class="btn o" href="https://www.linkedin.com/in/https://www.linkedin.com/in/juan-s-john-6093a8325?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn</a><a class="btn o" href="resume.pdf" download>Download résumé</a></div>
+<footer>© 2026 Juan S John · Kottayam, Kerala, India</footer></div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),lp=(a,b,t)=>a+(b-a)*t,ez=t=>t*t*(3-2*t);
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* loader: line draws around a wobbly outline with a glowing comet */
+const bl=$('#bl'),cm=$('#cm');
+(()=>{const N=9,P=[];for(let i=0;i<N;i++){const a=i/N*6.2832,r=112+(i%3-1)*16+(i%2)*8;P.push([Math.cos(a)*r,Math.sin(a)*r])}
+let d=`M${(P[0][0]+P[N-1][0])/2},${(P[0][1]+P[N-1][1])/2}`;for(let i=0;i<N;i++){const p=P[i],q=P[(i+1)%N];d+=`Q${p[0]},${p[1]} ${(p[0]+q[0])/2},${(p[1]+q[1])/2}`}bl.setAttribute('d',d+'Z')})();
+const L=bl.getTotalLength();bl.style.strokeDasharray=L;let t0;
+function draw(t){t0??=t;const k=ez(cl((t-t0)/1900)),pt=bl.getPointAtLength(k*L);bl.style.strokeDashoffset=L*(1-k);cm.setAttribute('cx',pt.x);cm.setAttribute('cy',pt.y);
+if(k<1)requestAnimationFrame(draw);else setTimeout(()=>{$('#pre').classList.add('go');document.body.classList.add('ready');setTimeout(()=>$('#pre').remove(),1100)},300)}
+rm?(()=>{$('#pre').remove();document.body.classList.add('ready')})():requestAnimationFrame(draw);
+/* smooth scrolling (eased wheel scroll, native on touch) */
+const mx=()=>document.documentElement.scrollHeight-innerHeight;let cur=scrollY,tgt=scrollY,raf=0;
+if(!rm&&matchMedia('(pointer:fine)').matches){
+let lt=0;const tick=n=>{const dt=Math.min((n-(lt||n-16))/1000,.05);lt=n;cur+=(tgt-cur)*(1-Math.exp(-dt*6));if(Math.abs(tgt-cur)<.3){cur=tgt;raf=0;lt=0}else raf=requestAnimationFrame(tick);scrollTo(0,cur)};
+const go=y=>{tgt=cl(y,0,mx());raf||(raf=requestAnimationFrame(tick))};
+addEventListener('wheel',e=>{if(e.ctrlKey)return;e.preventDefault();go(tgt+e.deltaY*.9)},{passive:false});
+addEventListener('scroll',()=>{if(!raf)cur=tgt=scrollY});
+addEventListener('keydown',e=>{const k={ArrowDown:90,ArrowUp:-90,PageDown:innerHeight*.9,PageUp:-innerHeight*.9,' ':e.shiftKey?-innerHeight*.9:innerHeight*.9}[e.key];if(k!=null&&!/INPUT|TEXTAREA|BUTTON/.test(e.target.tagName)){e.preventDefault();go(tgt+k)}});
+$$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=a.getAttribute('href')=='#top'?0:$(a.getAttribute('href'))?.offsetTop;if(t!=null){e.preventDefault();go(t)}}))}
+/* scroll-linked scenes */
+const h1=$('#h1'),phw=$('#phw'),aw=$('#about'),card=$('#card'),ab=$('#ab'),cimg=$('#cimg'),gw=$('#work'),trk=$('#trk'),pcs=$$('.pc'),g1=$('#g1'),g2=$('#g2'),ps=$('#path');
+const ww=[...$('#ab p').childNodes].length?(()=>{const p=$('#ab p');p.innerHTML=p.textContent.split(' ').map(x=>`<span class="w">${x}</span>`).join(' ');return $$('#ab .w')})():[];
+let lastY=scrollY,vel=0;
+const pr=el=>{const r=el.getBoundingClientRect();return cl(-r.top/(r.height-innerHeight))};
+(function f(){const y=scrollY,vw=innerWidth,vh=innerHeight,m=vw<700;
+if(y<vh*1.3){h1.style.transform=`translateY(${y*.3}px)`;phw.style.transform=`translateY(${y*.12}px) scale(${1+y/3500})`}
+let p=pr(aw),q=ez(cl(p/.62));card.style.width=lp(m?56:24,100,q)+'vw';card.style.height=lp(m?34:36,100,q)+'vh';card.style.borderRadius=lp(22,0,q)+'px';
+cimg.style.transform=`scale(${lp(1.3,1,q)})`;ab.style.opacity=cl((p-.62)/.12);const wp=cl((p-.72)/.25)*ww.length;ww.forEach((w,i)=>w.style.color=i<wp?'#ece6d8':'')
+$$('.wd').forEach(w=>w.style.opacity=1-cl((q-.55)/.3));
+const sr=ps.getBoundingClientRect();g1.style.transform=`translateX(${-sr.top*.25}px)`;g2.style.transform=`translateX(${sr.top*.25-vw*.6}px)`;
+const gp=pr(gw),tw=trk.scrollWidth-vw,tx=-gp*tw;trk.style.transform=`translateX(${tx}px)`;
+pcs.forEach(c=>{const x=(c.offsetLeft+c.offsetWidth/2+tx-vw/2)/vw,a=Math.min(Math.abs(x),1.1);c.style.transform=`perspective(1200px) rotateY(${-x*34}deg) translateZ(${-a*170}px) translateY(${a*a*30}px) skewX(${cl(vel*.12,-5,5)}deg)`;c.firstElementChild.style.transform=`translateX(${-x*140}px)`});
+requestAnimationFrame(f)})();
+/* headings scramble in */
+const G='ABCDEFGHIJKLMNOPQRSTUVWXYZ#/<>';
+const so=new IntersectionObserver((es)=>es.forEach(e=>{if(!e.isIntersecting)return;so.unobserve(e.target);const el=e.target,s=el.textContent,t=performance.now();if(rm)return;(function z(n){const k=(n-t)/900;el.textContent=[...s].map((c,i)=>c==' '||i<k*s.length*1.15?c:G[(Math.random()*G.length)|0]).join('');k<1?requestAnimationFrame(z):el.textContent=s})(t)}),{threshold:.6});
+$$('[data-scr]').forEach(e=>so.observe(e));
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach((e,i)=>{e.style.setProperty('--dl',(i%4)*.08+'s');ro.observe(e)});
+const bar=$('#bar'),l1=$$('.ln>span');
+(function k(){vel+=((scrollY-lastY)-vel)*.12;lastY=scrollY;document.documentElement.style.setProperty('--sk',cl(vel*-.08,-6,6).toFixed(2));bar.style.transform=`scaleX(${scrollY/Math.max(1,mx())})`;
+const y=scrollY;if(y<innerHeight*1.3&&l1.length>1){l1[0].style.setProperty('--x',-y*.14+'px');l1[1].style.setProperty('--x',y*.14+'px')}requestAnimationFrame(k)})();
+/* skills accordion */
+$$('.sr').forEach(r=>{const b=r.querySelector('button'),on=()=>{$$('.sr').forEach(x=>{x.classList.toggle('on',x==r);x.querySelector('button').setAttribute('aria-expanded',x==r)})};b.addEventListener('click',on);r.addEventListener('mouseenter',on)});
+</script>
+</body>
+</html>
